@@ -29,6 +29,7 @@ def gradient_descent(X,y,theta,alpha,iters):
     return theta, cost
 
 
+
 #append a ones column to the frint of the data set
 data.insert(0,'Ones',1)
 
