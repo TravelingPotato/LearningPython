@@ -47,11 +47,27 @@ alpha = 0.01
 iters = 1000
 
 g, cost = gradient_descent(X, y, theta, alpha, iters)
-print(g)
-print(compute_cost(X, y, g))
 
+#plot prediction vs data
+x = np.linspace(data.Population.min(), data.Population.max(),100)
+f = g[0, 0] + (g[0,1] * x)
+fig, ax = plt.subplots(figsize=(12,8))
+ax.plot(x,f,'r--', label='Prediction')
+ax.scatter(data.Population, data.Profit, label='Training Data')
+ax.legend(loc=2)
+ax.set_xlabel('Population')
+ax.set_ylabel('Profit')
+ax.set_title('Predicted Profit vs. Population Size')
 
+#plot cost function over iterations
+fig, ax = plt.subplots(figsize=(12,8))
+ax.plot(np.arange(iters), cost, 'r')
+ax.set_xlabel('Iterations')
+ax.set_ylabel('Cost')
+ax.set_title('Error vs. Training Epoch')
+plt.show()
 
+print(x)
 #create scatter plot of data
 #data.plot(kind='scatter', x='Population', y='Profit', figsize=(12,8))  
 #plt.show()
