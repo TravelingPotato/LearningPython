@@ -30,10 +30,6 @@ def gradient_descent(X,y,theta,alpha,iters):
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 81e893a6af6f7828cb62d08037c8341f022a21c0
 #append a ones column to the frint of the data set
 data.insert(0,'Ones',1)
 
@@ -47,7 +43,6 @@ X = np.matrix(X.values)
 y = np.matrix(y.values)
 theta = np.matrix(np.array([0,0]))
 
-<<<<<<< HEAD
 alpha = 0.01
 iters = 1000
 
@@ -73,9 +68,6 @@ ax.set_title('Error vs. Training Epoch')
 plt.show()
 
 print(x)
-=======
-print(compute_cost(X,y,theta))
->>>>>>> 81e893a6af6f7828cb62d08037c8341f022a21c0
 #create scatter plot of data
 #data.plot(kind='scatter', x='Population', y='Profit', figsize=(12,8))  
 #plt.show()
