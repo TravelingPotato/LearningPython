@@ -28,9 +28,7 @@ def gradient_descent(X,y,theta,alpha,iters):
     
     return theta, cost
 
-
-
-#append a ones column to the frint of the data set
+#append a ones column to the front of the data set
 data.insert(0,'Ones',1)
 
 #set X (training data) and y (target variable)
@@ -66,8 +64,3 @@ ax.set_xlabel('Iterations')
 ax.set_ylabel('Cost')
 ax.set_title('Error vs. Training Epoch')
 plt.show()
-
-print(x)
-#create scatter plot of data
-#data.plot(kind='scatter', x='Population', y='Profit', figsize=(12,8))  
-#plt.show()
