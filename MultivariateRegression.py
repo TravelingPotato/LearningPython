@@ -1,11 +1,9 @@
 import numpy as np 
-import os
 import pandas as pd 
 import matplotlib.pyplot as plt 
 
 #import data
-path = os.getcwd() + '/data/ex1data2.txt'
-data2 = pd.read_csv(path, header=None, names=['Size','Bedrooms','Price'])
+data2 = pd.read_csv("c:\\Users\\ande5\\LearningPython\\data\\ex1data2.txt", header=None, names=['Size','Bedrooms','Price'])
 
 #normalize data2
 data2 = (data2 - data2.mean()) / data2.std()
@@ -50,6 +48,7 @@ g2, cost2 = gradient_descent(X2, y2, theta2, alpha, iters)
 #cost of model
 print(compute_cost(X2, y2, g2))
 
+#plot cost
 fig, ax = plt.subplots(figsize=(12,8))  
 ax.plot(np.arange(iters), cost2, 'r')  
 ax.set_xlabel('Iterations')  
