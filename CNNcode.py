@@ -75,6 +75,7 @@ with tf.Session() as sess:
 
         sess.run(train,feed_dict={x:batch_x,y_true:batch_y,hold_prob:0.5})
 
+        #Record Accuracy
         if i%100 == 0:
 
             print('ON STEP: {}'.format(i))
